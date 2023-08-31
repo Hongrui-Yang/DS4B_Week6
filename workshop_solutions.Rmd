@@ -16,6 +16,26 @@ output:
 
 # Bonus section
 
+
 ## Loading the data
+```{r}
+# Load the tidyverse package
+library(tidyverse)
+data<- read.csv("raw_data/data (2).csv")
+head(data)
+```
 
 ## An interesting plot
+```{r}
+# Create a scatter plot of TempC vs. weight, colored by sex
+ggplot(data, aes(x = weight, y = VO2_ml_per_h, color = Sex)) +
+  geom_point(aes(shape = Sex), size = 3, alpha = 0.7) +
+  labs(title = "Metabolic Rate vs. weight by Sex",
+       x = "weight (grams)",
+       y = "TempC",
+       color = "Sex") +
+  theme_minimal() +
+  scale_shape_manual(values = c("F" = 16, "M" = 17))
+
+```
+
