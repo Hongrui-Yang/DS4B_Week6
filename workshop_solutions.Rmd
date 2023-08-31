@@ -30,7 +30,7 @@ head(data)
 # Create a scatter plot of TempC vs. weight, colored by sex
 ggplot(data, aes(x = weight, y = VO2_ml_per_h, color = Sex)) +
   geom_point(aes(shape = Sex), size = 3, alpha = 0.7) +
-  labs(title = "Metabolic Rate vs. weight by Sex",
+  labs(title = "TEMPC vs. weight by Sex",
        x = "weight (grams)",
        y = "TempC",
        color = "Sex") +
